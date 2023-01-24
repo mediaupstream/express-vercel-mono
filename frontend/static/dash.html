@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Axiom</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <link rel="icon" href="/static/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+  <link rel="manifest" href="/static/site.webmanifest">
+  <link rel="preload" as="script" href="{{assetUrl}}/chunks/vendor.3406de13.js">
+  <meta name="description" content="Axiom Dashboard">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  {{#if fathomSite}}
+    <script src="https://swallow.axiom.co/script.js" site="{{fathomSite}}" defer="defer"></script>
+  {{/if}}
+
+  <script>
+    window.axiom = {{json axiom}};
+  </script>
+
+  <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://s-cdn.axiom.co/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey=window.axiom.segmentWriteKey;;analytics.SNIPPET_VERSION="4.15.3";
+    analytics.load(window.axiom.segmentWriteKey);
+    if (window.axiom.user) {
+      analytics.identify(axiom.user.id, {
+        name: window.axiom.user.name,
+        email: window.axiom.user.email,
+      });
+    }
+    analytics.page();
+    }}();
+  </script>
+
+  
+  <script data-axiom-no-replace>
+    window.assetUrl = "{{assetUrl}}";
+    // Store the file path for any workers so they can be fetched explicitly
+    window.axiom.workers = [];
+    
+    window.axiom.workers.push({ label: "editor", url: "{{assetUrl}}/js/editor.36226330.js" });
+    
+    window.axiom.workers.push({ label: "kusto", url: "{{assetUrl}}/js/kusto.7d71e0ff.js" });
+    
+  </script>
+<link rel="icon" href="{{assetUrl}}/favicon.ico"><script defer="defer" src="{{assetUrl}}/js/dash.c227c6ae.js"></script></head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
