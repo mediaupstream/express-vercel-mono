@@ -1,0 +1,24 @@
+{
+  "name": "express-vercel-mono",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "frontend-server/dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"build noop\"",
+    "start": "node frontend-server/dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mediaupstream/express-vercel-mono.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mediaupstream/express-vercel-mono/issues"
+  },
+  "homepage": "https://github.com/mediaupstream/express-vercel-mono#readme",
+  "engines": {
+    "node": ">=14"
+  }
+}
