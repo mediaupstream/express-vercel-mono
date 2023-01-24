@@ -1,0 +1,10 @@
+{
+  "builds": [{
+    "src": "frontend-server/dist/index.js",
+    "use": "@vercel/node"
+  }],
+  "routes": [{
+    "src": "/(.*)",
+    "dest": "frontend-server/dist/index.js"
+  }]
+}
